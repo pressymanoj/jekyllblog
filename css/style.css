@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+
+.navbar-brand {
+	padding-top:0px !important;
+	margin-left:50px !important;
+}
+
+.navbar {
+	min-height:70px !important;
+}
+
+.navbar-brand img {
+	width:50%;
+	
+}
+
+#top_bar {
+	background-color:#EF5BA1;
+	height:30px;
+}
+
+.navbar-default {
+	background-color:#fff !important;
+	
+}
+
+footer {
+	background-color:#808285;
+	color:#fff !important;
+}
+
+a {
+	text-decoration:none;
+}
+
+footer a {
+	color:#fff;
+}
+
+.page-content {
+	padding-top:100px;
+}
+
+.post-list li:nth-child(odd) 
+{
+	background-color:#F5F5F5;
+}
+
+.page-heading {
+	padding-bottom:15px;
+}
+
+.post-list h2 {
+	margin-top:0px !important;
+}
+	

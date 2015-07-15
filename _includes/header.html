@@ -1,0 +1,27 @@
+<header >
+
+  <nav class="navbar navbar-default navbar-fixed-top" id="nav_menu">
+  <div class="" id="top_bar">
+
+</div>
+    <div class="container-fluid" id="nav_div">
+      <div class="navbar-header" id="menu_title">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="{{ site.url }}"><img class="img-responsive" src="{{ site.url}}/assets/logo.png"</a> </div>
+      <!--end of menu_title-->
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+        <!--<li><a class="page-link" href="{{ site.url }}">Home</a></li>-->
+        {% for page in site.pages %}
+        	{% if page.title %}
+          	<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+          	{% endif %}
+        {% endfor %}  
+        </ul>
+      </div>
+      <!--end of #navbar --> 
+    </div>
+    <!--end of #nav_div --> 
+  </nav>
+
+</header>
