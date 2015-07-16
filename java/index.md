@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Java
+permalink: /java/
 ---
 
 <div class="home">
@@ -8,7 +10,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-    
+    {{ request.myvar }}
       <li>
       <div class="row container">
     	
