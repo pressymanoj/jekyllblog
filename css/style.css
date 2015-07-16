@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	font-family: 'Oxygen', 'sans-serif' !important;
+	line-height:2 !important;
+}
+
 .navbar-brand {
 	padding-top:0px !important;
 	margin-left:50px !important;
@@ -16,7 +21,7 @@
 }
 
 #top_bar {
-	background-color:#EF5BA1;
+	background-color:#007BBA;
 	height:30px;
 }
 
@@ -30,12 +35,22 @@ footer {
 	color:#fff !important;
 }
 
+.col_date  p{
+	float:right !important;
+}
+
 a {
 	text-decoration:none;
 }
 
 footer a {
 	color:#fff;
+}
+
+.wrapper {
+	max-width:100% !important;
+	margin-left:0px !important;
+	margin-right:0px !important;
 }
 
 .page-content {
@@ -53,5 +68,12 @@ footer a {
 
 .post-list h2 {
 	margin-top:0px !important;
+}
+.post-list {
+	width:100%;
+}
+
+.post-list li {
+	width:100%;
 }
 	
