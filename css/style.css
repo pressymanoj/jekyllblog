@@ -24,7 +24,7 @@ body {
 	font-weight:bold !important;
 }
 
-.active {
+.active, .active_link {
 	border-bottom:3px solid #007BBA;
 }
 
