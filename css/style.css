@@ -9,16 +9,16 @@ body {
 
 .navbar-brand {
 	padding-top:0px !important;
-	margin-left:50px !important;
+	margin-left:0px !important;
 }
 
 .navbar {
-	min-height:70px !important;
+	min-height:100px !important;
 }
 
-.navbar-brand img {
-	width:40%;
-	
+.navbar-brand img, #footer_logo img  {
+	width:23%;
+	padding-top:2px;
 }
 .navbar-brand span {
 	font-weight:bold !important;
@@ -26,6 +26,10 @@ body {
 
 .active, .active_link {
 	border-bottom:3px solid #007BBA;
+}
+#navbar ul {
+	max-width:90% !important;
+	float:right !important;
 }
 
 #top_bar {
@@ -126,6 +130,7 @@ footer a {
 #footer_menu {
 	margin-left:0px !important;
 	width:70%;
+	font-size:11px;
 }
 	
 #footer_menu  li{
@@ -136,6 +141,9 @@ footer a {
 #footer_menu  li a{
 	color:#fff;
 }
+#div_follow {
+	padding-top:100px;
+}
 
 #follow_us {
 	padding-top:10px;
@@ -145,3 +153,4 @@ footer a {
 	padding-right:10px;
 	
 }
+
