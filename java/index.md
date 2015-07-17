@@ -5,28 +5,32 @@ permalink: /java/
 ---
 
 <div class="home">
+	{{ request.myvar }}
 
-  <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
     {% for post in site.posts %}
-    {{ request.myvar }}
+    {% if post.tags contains 'java' %}
       <li>
-      <div class="row container">
+	  <div class="container">
+      <div class="row ">
     	
-        <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="col-lg-8 col-md-8 col-xs-12">
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
         <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+        
         </div>
-        <div class="col-lg-6 col-md-6 col-xs-12 col_date">
+        <div class="col-lg-4 col-md-4 col-xs-12 col_date">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         </div>
         </div>
+		<a class="read_more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+		</div>
       </li>
+	  {% endif %}
     {% endfor %}
   </ul>
 
