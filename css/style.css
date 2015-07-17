@@ -16,7 +16,7 @@ body {
 	min-height:100px !important;
 }
 
-.navbar-brand img, #footer_logo img  {
+.navbar-brand img  {
 	width:23%;
 	padding-top:2px;
 }
@@ -55,8 +55,8 @@ a, a:hover {
 	text-decoration:none !important;
 }
 
-footer a {
-	color:#fff;
+footer a, footer a:visited {
+	color:#fff !important;
 }
 
 #main_div {
@@ -154,3 +154,8 @@ footer a {
 	
 }
 
+#footer_logo img {
+	width:23%;
+	padding-top:50px;
+
+}
