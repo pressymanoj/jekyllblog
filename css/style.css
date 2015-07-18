@@ -128,25 +128,34 @@ footer a, footer a:visited {
 }
 
 #footer_menu {
-	margin-left:0px !important;
-	width:70%;
-	font-size:11px;
+	/*margin-left:0px !important;
+	max-width:200px;*/
+	font-size:13px;
+	display:inline !important;
+	list-style-type:none;
+	float:left;
 }
 	
 #footer_menu  li{
 	list-style:none;
-	border-bottom:1px solid rgba(255,255,255,.3);
+	display:inline !important;
+	padding-right:10px !important;
 }
 
 #footer_menu  li a{
 	color:#fff;
 }
 #div_follow {
-	padding-top:100px;
+	
+}
+
+#div_follow h5 {
+	text-align:center;
 }
 
 #follow_us {
-	padding-top:10px;
+	max-width:150px;
+	float:right;
 }
 
 #follow_us a {
@@ -158,4 +167,12 @@ footer a, footer a:visited {
 	width:23%;
 	padding-top:50px;
 
+}
+
+.hrzline {
+	width:100%;
+}
+
+.div_warning {
+	font-style:italic;
 }
