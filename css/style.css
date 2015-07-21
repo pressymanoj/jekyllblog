@@ -78,6 +78,7 @@ footer a, footer a:visited {
 
 .page-content {
 	padding-top:100px;
+	
 }
 
 .post-list a {
@@ -177,3 +178,37 @@ footer a, footer a:visited {
 .div_warning {
 	font-style:italic;
 }
+
+.authorname {
+	text-align:center;
+}
+.post-content {
+	text-align:justify !important;
+}
+
+.recent_posts {
+	margin-left:0px;
+	line-height:1.5;
+}
+
+.recent_posts li {
+	list-style:none;
+	padding-bottom:10px;
+	padding-top:10px;
+	min-height:50px;
+	
+}
+
+.post-title {
+	font-size:36px !important;
+}
+
+.active_post {
+	background-image:url(../assets/active_bg.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	padding-left:5px;
+	
+}
+	

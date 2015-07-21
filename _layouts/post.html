@@ -6,25 +6,47 @@ comments: true
 {% assign author = site.data.authors[page.author] %}
 <div class="post">
 <div class="container">
+<div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+  <h3>Recent Posts</h3>
+  <ul class="recent_posts">
+  {% for post in site.posts %}
+  	{% if page.title == post.title %}
+    <li class="active_post">
+    	<a href="{{ post.url }}">{{ post.title | truncatewords: 7 }}</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+  <!--{% include recent_posts.html %}-->
+  </div>
+  <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
   <header class="post-header">
   
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h3 class="post-title">{{ page.title }}</h3>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
+  
 
   <article class="post-content">
   <div class="row">
-  <div class="col-lg-8">
+  <div class="col-lg-9">
     {{ content }}
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
     {% if page.author %}  
-    <img src="{{ site.url}}/assets/authors/{{ author.avatar }}" /><br />
-    {{ author.name }}
+    <img class="center-block" src="{{ site.url}}/assets/authors/{{ author.avatar }}" />
+    <p class="authorname">{{ author.name }}</p>
     {% endif %}
     </div>
     </div>
   </article>
   {% include comments.html %}
+  </div>
+  </div>
   </div>
 </div>
