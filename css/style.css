@@ -4,7 +4,7 @@
 body {
 	font-family: 'Oxygen', 'sans-serif' !important;
 	line-height:2 !important;
-	font-size:17px !important;
+	font-size:13px !important;
 }
 
 .navbar-brand {
@@ -13,11 +13,11 @@ body {
 }
 
 .navbar {
-	min-height:100px !important;
+	min-height:112px !important;
 }
 
 .navbar-brand img  {
-	width:23%;
+	width:14%;
 	padding-top:2px;
 }
 .navbar-brand span {
@@ -30,6 +30,7 @@ body {
 #navbar ul {
 	max-width:90% !important;
 	float:right !important;
+	margin-top:15px;
 }
 
 #top_bar {
