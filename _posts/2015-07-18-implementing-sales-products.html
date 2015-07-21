@@ -33,7 +33,7 @@ tags :
 <p>The graphic below depicts the business architecture of how this concept is realized in a banking IT system landscape.</p>
 
 
-<img src="{{ site.url}}/assets/posts/pricing_engine.jpg"  />
+<img src="{{ site.url}}{{ site.baseurl }}/assets/posts/pricing_engine.jpg"  />
 
 <p>As per the diagram above, sales products exists in your sales product catalogue and it refers the price list in the central pricing engine. When the sales process is completed and the application is converted to a contract, the account is created in the core banking system. The sales product is mapped to the manufactured product and the account is created based on the manufactured product but it’s linked to price list which was used in the sales process.</p>
 
@@ -61,7 +61,7 @@ tags :
 
 <p>Now, let’s look briefly at how this works in the SAP world.</p>
 
-<img src="{{ site.url}}/assets/posts/sapcrm.jpg"  />
+<img src="{{ site.url}}{{ site.baseurl }}/assets/posts/sapcrm.jpg"  />
 
 
 <p>As per the concept of sales products and manufactured products, the cardinality between the two is N: 1. This means that when an Account Contract is created in SAP Banking Services it needs to be mapped to the appropriate Sales Product and the Account Contract in SAP Banking Services will need to hold the identifier of the Sales Product to which it belongs to. During the operational processes in SAP Banking Services for account contracts, the Financial Conditions maintained in the Product Pricing List will be fetched for the sales product will be picked up for execution of the operational process.</p>

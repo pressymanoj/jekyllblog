@@ -20,7 +20,7 @@ layout: default
         <div class="col-lg-8 col-md-8 col-xs-12">
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a>
         </h2>
         <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
         
@@ -30,7 +30,7 @@ layout: default
         </div>
         
         </div>
-        <a class="read_more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
+        <a class="read_more" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">Read More</a>
         </div>
       </li>
     {% endfor %}

@@ -13,11 +13,11 @@ comments: true
   {% for post in site.posts %}
   	{% if page.title == post.title %}
     <li class="active_post">
-    	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | truncatewords: 7 }}</a>
+    	<a href="{{ site.url}}{{ site.baseurl }}{{ post.url }}">{{ post.title | truncatewords: 7 }}</a>
     </li>
     {% else %}
     <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ site.url}}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endif %}
   {% endfor %}
@@ -39,7 +39,7 @@ comments: true
     </div>
     <div class="col-lg-3">
     {% if page.author %}  
-    <img class="center-block" src="{{ site.url}}/assets/authors/{{ author.avatar }}" />
+    <img class="center-block" src="{{ site.url}}{{ site.baseurl}}/assets/authors/{{ author.avatar }}" />
     <p class="authorname">{{ author.name }}</p>
     {% endif %}
     </div>

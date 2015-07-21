@@ -14,19 +14,19 @@
         <span class="icon-bar"></span> 
         </button>
         <a class="navbar-brand" href="{{ site.url }}">
-        <span><img class="img-responsive" src="{{ site.url}}/assets/logo.png" />tracebucket</span>
+        <span><img class="img-responsive" src="{{ site.url}}{{ site.baseurl }}/assets/logo.png" />tracebucket</span>
         </a> 
         </div>
       <!--end of menu_title-->
       <div id="navbar" class="navbar-collapse collapse ">
         <ul class="nav navbar-nav ">
-        <li><a class="page-link active" href="{{ site.url }}">Home</a></li>
-        <li><a class="page-link" href="{{ site.url }}/java?myvar=java">Java</a></li>
-        <li><a class="page-link" href="{{ site.url }}/sap">SAP</a></li>
-        <li><a class="page-link" href="{{ site.url }}/architecture">Architecture</a></li>
-        <li><a class="page-link" href="{{ site.url }}/agile">Agile</a></li>
-        <li><a class="page-link" href="{{ site.url }}/devops">DevOps</a></li>
-        <li><a class="page-link" href="{{ site.url }}">Contact Us</a></li>
+        <li><a class="page-link active" href="{{ site.url }}{{ site.baseurl }}">Home</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/java?myvar=java">Java</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/sap">SAP</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/architecture">Architecture</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/agile">Agile</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}/devops">DevOps</a></li>
+        <li><a class="page-link" href="{{ site.url }}{{ site.baseurl }}">Contact Us</a></li>
         <!--{% for page in site.pages %}
         	{% if page.title %}
           	<li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
