@@ -14,3 +14,27 @@ github_username:  jekyll
 markdown: kramdown
 host : '192.168.1.16'
 port : '9090'
+
+exclude: ['tracebucket-blog-39e3e27e7fe4.p12']
+
+
+jekyll_ga:
+  service_account_email:  374005792262-1eps1v9notjvgenls94dink4a8t0cgdg@developer.gserviceaccount.com  # service account email address
+  key_file: tracebucket-blog-39e3e27e7fe4.p12  # service account private key file
+  key_secret: notasecret    # service account private key's password
+  profileID: ga:106030427        # profile ID 
+  start: last month         # Beginning of report
+  end: now                  # End of report
+  metric: ga:pageviews      # Metric code
+  segment:                  # optional
+  filters:                  # optional
+  sort: false                # Sort posts by this metric
+  
+jekyll_sort:
+  - src: posts
+    by: _ga
+    direction: down
+    dest: posts_popular  
+
+  
+  
