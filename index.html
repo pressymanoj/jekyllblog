@@ -2,9 +2,26 @@
 layout: default
 ---
 
-<div id="main_div" class="home">
+
+<div class="row" id="main_row">
+<div class="col-lg-2" id="main_col">
+<hr  />
+<h2>Our Blogs</h2>
+<hr class="hrz_line" />
+<ul id="blog_menu">
+<li><a href="#">All Blogs</a></li>
+<li><a href="#">Most Buzzed Blogs</a></li>
+<li><a href="#">Most Buzzed Authors</a></li>
+</ul>
+</div>
+<div class="col-lg-10">
+<div id="main_div" class="">
 {% include slider.html %}
-<div id="intro" class="container">
+
+</div>
+
+
+<div id="intro" class="">
 
   <h1 class="page-heading">WELCOME!</h1>
   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
@@ -14,8 +31,7 @@ layout: default
     {% for post in site.posts %}
     
       <li>
-      <div class="container">
-      <div class="row">
+      <div class="row post_row">
     	
         <div class="col-lg-8 col-md-8 col-xs-12">
 
@@ -29,7 +45,7 @@ layout: default
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         </div>
         
-        </div>
+        
         <a class="read_more" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">Read More</a>
         </div>
       </li>
@@ -38,4 +54,5 @@ layout: default
 
   <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
 
+</div>
 </div>
