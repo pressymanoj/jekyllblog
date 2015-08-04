@@ -6,12 +6,15 @@ layout: default
 <div class="row" id="main_row">
 <div class="col-lg-2" id="main_col">
 <hr  />
-<h2>Our Blogs</h2>
+<h2 class="side_title">Our Blogs</h2>
 <hr class="hrz_line" />
 <ul id="blog_menu">
+  {% for post in site.posts %}
+  <li><a href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title | truncatewords: 5 }}</a></li>
+  {% endfor %}
 <li><a href="{{ site.url}}{{ site.baseurl}}/index.html">All Blogs</a></li>
 <li><a href="{{ site.url}}{{ site.baseurl}}/most_buzzed.html">Most Buzzed Blogs</a></li>
-<li><a href="#">Most Buzzed Authors</a></li>
+<li><a href="{{ site.url}}{{ site.baseurl}}/most_buzz_author.html">Most Buzzed Authors</a></li>
 </ul>
 </div>
 <div class="col-lg-10">
@@ -29,23 +32,23 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-    
+
       <li>
       <div class="row post_row">
-    	
+
         <div class="col-lg-8 col-md-8 col-xs-12">
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a>
         </h2>
         <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-        
+
         </div>
         <div class="col-lg-4 col-md-4 col-xs-12 col_date">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         </div>
-        
-        
+
+
         <a class="read_more" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">Read More</a>
         </div>
       </li>

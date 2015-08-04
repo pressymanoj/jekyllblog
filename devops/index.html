@@ -4,14 +4,29 @@ title: DevOps
 permalink: /devops/
 ---
 
+<div class="col-lg-12 page_row">
+<div class="col-lg-2 page_col">
+<hr  />
+<h3 class="side_title">Related Blogs</h3>
+<hr class="hrz_line" />
+<ul id="blog_menu">
+  {% for post in site.posts %}
+  {% if post.tags contains 'devops' %}
+  <li><a href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title | truncatewords:7 }}</a></li>
+  {% endif %}
+  {% endfor %}
+
+</ul>
+</div>
+<div class="col-lg-10 sub_col" >
 <div class="home">
+	{{ request.myvar }}
 
-
+	<h2 class="page-title">DevOps</h2>
   <ul class="post-list">
     {% for post in site.posts %}
     {% if post.tags contains 'devops' %}
       <li>
-	  <div class="container">
       <div class="row ">
     	
         <div class="col-lg-8 col-md-8 col-xs-12">
@@ -25,9 +40,9 @@ permalink: /devops/
         <div class="col-lg-4 col-md-4 col-xs-12 col_date">
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
         </div>
+        <a class="read_more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
         </div>
-		<a class="read_more" href="{{ post.url | prepend: site.baseurl }}">Read More</a>
-		</div>
+		
       </li>
 	  {% endif %}
     {% endfor %}
@@ -35,4 +50,6 @@ permalink: /devops/
 
   <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
 
+</div>
+</div>
 </div>

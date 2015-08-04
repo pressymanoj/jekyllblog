@@ -10,24 +10,24 @@
   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl | prepend: site.url}}">
   <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl | prepend: site.url}}">
   <link rel="stylesheet" href="{{ "/css/responsiveslider.css" | prepend: site.baseurl | prepend: site.url}}">
-  
+
   <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-  
+
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
   <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
   <script src="{{ "/js/responsiveslides.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
   <script src="{{ "/js/jquery.twbsPagination.js" | prepend: site.baseurl | prepend: site.url }}"></script>
   <script src="{{ "/js/jquery.twbsPagination.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-  
+
   <script>
   $(function() {
     $(".rslides").responsiveSlides();
-	
-	
-	
+
+
+
   });
   $(".rslides").responsiveSlides({
   auto: false,             // Boolean: Animate automatically, true or false
@@ -51,18 +51,22 @@
 
 <script>
 $(document).ready(function() {
-		$("#navbar a").click(function () {
-		//alert("test");
-		$("#navbar a").removeClass("active");
-		$(this).addClass("active");
-		});
 
-	
+  $("a.page-link").on("click",function () {
+    var clickedIndex = $("a.page-link").index(this) + 1;
+    //console.log(clickedIndex);
+    window.sessionStorage.setItem('clickedIndex', clickedIndex);
+  });
+  $("a.page-link").removeClass("active");
+  var savedIndex =  window.sessionStorage.getItem('clickedIndex') || '1';
+  //console.log(savedIndex);
+  $(".new-menu li:nth-child(" + savedIndex + ")").find("a").addClass("active");
 });
 
 </script>
 
-<script>
+<!--<script>
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -71,5 +75,5 @@ $(document).ready(function() {
   ga('create', 'UA-65729874-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script>-->
 </head>

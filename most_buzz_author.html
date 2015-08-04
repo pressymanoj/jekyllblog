@@ -9,9 +9,6 @@ layout: default
 <h2>Our Blogs</h2>
 <hr class="hrz_line" />
 <ul id="blog_menu">
-  {% for post in site.posts %}
-  <li><a href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a></li>
-  {% endfor %}
 <li><a href="{{ site.url}}{{ site.baseurl}}/index.html">All Blogs</a></li>
 <li><a href="{{ site.url}}{{ site.baseurl}}/most_buzzed.html">Most Buzzed Blogs</a></li>
 <li><a href="{{ site.url}}{{ site.baseurl}}/most_buzz_author.html">Most Buzzed Authors</a></li>
@@ -23,27 +20,22 @@ layout: default
 </div>
 
 
-  <ul class="post-list">
+  <ul class="author-list">
     {% for post in site.posts_popular %}
+    {% assign author = site.data.authors[post.author] %}
     
       <li>
-      <div class="row post_row">
     	
-        <div class="col-lg-8 col-md-8 col-xs-12">
+        <div class="col-lg-4 col-md-4 col-xs-12">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">{{ post.title }}</a>
-        </h2>
-        <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+        {% if post.author %} 
+         
+    <img class="center-block" src="{{ site.url}}{{ site.baseurl}}/assets/authors/{{ author.avatar }}" />
+    <p class="center-block" class="authorname">{{ author.name }}</p>
+    {% endif %}
         
         </div>
-        <div class="col-lg-4 col-md-4 col-xs-12 col_date">
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        </div>
         
-        
-        <a class="read_more" href="{{ post.url | prepend: site.baseurl | prepend: site.url}}">Read More</a>
-        </div>
       </li>
     {% endfor %}
   </ul>

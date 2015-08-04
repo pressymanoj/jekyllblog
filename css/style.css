@@ -1,10 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+html,body {
+	height:100%;
+}
 body {
 	font-family: 'Oxygen', 'sans-serif' !important;
 	line-height:2 !important;
 	font-size:13px !important;
+	
 }
 
 .post_row, #main_row {
@@ -26,6 +30,7 @@ body {
 #blog_menu li {
 	list-style:none;
 	padding-bottom:10px;
+	line-height:1.5;
 }
 
 #blog_menu li a {
@@ -53,17 +58,27 @@ body {
 }
 
 .active, .active_link {
-	border-bottom:3px solid #007BBA;
+	/*border-bottom:3px solid #007BBA;*/
+	background-color:#fff;
+	color:#00F !important
 }
+
 #navbar ul {
 	max-width:90% !important;
 	float:right !important;
-	margin-top:15px;
+	margin-top:25px;
 }
 
 #navbar ul li a {
 	color:#fff;
 	font-size:14px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+#navbar ul li a:hover {
+	background-color:#fff;
+	color:#00F !important
 }
 
 #top_bar {
@@ -73,11 +88,13 @@ body {
 
 .navbar-default {
 	background-color:#066DD2 !important;
-	
+
 }
 
+
 footer {
-	background-color:#808285;
+	
+	background-color:rgb(6, 109, 210);
 	color:#fff !important;
 }
 
@@ -111,21 +128,26 @@ footer a, footer a:visited {
 
 .page-content {
 	padding-top:100px;
-	
+
 }
 
 .post-list a {
 	color:#000;
 }
 
-.post-list li:nth-child(odd) 
+.post-list li:nth-child(odd)
 {
-	background-color:#F5F5F5;
+	background-color:rgba(6,109,210,.06);
 }
 
 .page-heading {
 	padding-bottom:15px;
 	font-size:36px;
+
+}
+
+.author-list li{
+	list-style:none;
 	
 }
 
@@ -138,6 +160,7 @@ footer a, footer a:visited {
 
 .post-list li {
 	width:100%;
+	padding:10px 10px 10px 10px;
 }
 .post-list p {
 	text-align:justify;
@@ -156,7 +179,7 @@ footer a, footer a:visited {
 .highlight {
 	width:70%;
 	height:200px;
-	
+
 }
 
 .highlight pre {
@@ -171,7 +194,7 @@ footer a, footer a:visited {
 	list-style-type:none;
 	float:left;
 }
-	
+
 #footer_menu  li{
 	list-style:none;
 	display:inline !important;
@@ -182,7 +205,7 @@ footer a, footer a:visited {
 	color:#fff;
 }
 #div_follow {
-	
+
 }
 
 #div_follow h5 {
@@ -196,7 +219,7 @@ footer a, footer a:visited {
 
 #follow_us a {
 	padding-right:10px;
-	
+
 }
 
 #footer_logo img {
@@ -230,7 +253,7 @@ footer a, footer a:visited {
 	padding-bottom:10px;
 	padding-top:10px;
 	min-height:50px;
-	
+
 }
 
 .post-title {
@@ -243,6 +266,25 @@ footer a, footer a:visited {
 	background-size:cover;
 	background-position:center center;
 	padding-left:5px;
-	
+
 }
-	
+.page_row {
+	padding-top:60px;
+}
+
+.page_row, .postpage_row{
+	background-color:#fff !important;
+}
+
+.postpage_row {
+	padding-top:80px;
+}
+
+.page-title {
+	padding-bottom:25px;
+	padding-top:15px;
+}
+
+.side_title {
+	color:rgb(0,0,255);
+}
