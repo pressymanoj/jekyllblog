@@ -25,7 +25,7 @@ body {
 #blog_menu
 {
 	margin-left:0px;
-	padding-top:20px;
+/*	padding-top:20px;*/
 }
 #blog_menu li {
 	list-style:none;
@@ -59,8 +59,10 @@ body {
 
 .active, .active_link {
 	/*border-bottom:3px solid #007BBA;*/
+	border-bottom:3px solid #fff;
 	background-color:#fff;
 	color:#00F !important
+		
 }
 
 #navbar ul {
@@ -74,11 +76,12 @@ body {
 	font-size:14px;
 	padding-bottom:5px;
 	padding-top:5px;
+
 }
 
 #navbar ul li a:hover {
-	background-color:#fff;
-	color:#00F !important
+border-bottom:3px solid #fff;
+	color:#fff !important
 }
 
 #top_bar {
@@ -93,9 +96,11 @@ body {
 
 
 footer {
-	
-	background-color:rgb(6, 109, 210);
-	color:#fff !important;
+  background-color: rgb(6, 109, 210);
+    bottom: 0;
+    color: #fff !important;
+    position:fixed;
+    width: 100%;
 }
 
 .col_date  p{
@@ -287,4 +292,21 @@ footer a, footer a:visited {
 
 .side_title {
 	color:rgb(0,0,255);
+}
+html, body {
+  height: 100%;
+}
+#blog_menu li{
+    border-bottom: 1px solid #F0F6FC;
+    margin-left: 0;
+ 
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.post-content {
+    margin-bottom: 0px !important;
+}
+hr{
+margin-bottom:0px !important;
 }
