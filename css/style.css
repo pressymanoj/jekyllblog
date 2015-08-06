@@ -8,7 +8,7 @@ body {
 	font-family: 'Oxygen', 'sans-serif' !important;
 	line-height:2 !important;
 	font-size:13px !important;
-	
+
 }
 
 .post_row, #main_row {
@@ -60,9 +60,9 @@ body {
 .active, .active_link {
 	/*border-bottom:3px solid #007BBA;*/
 	border-bottom:3px solid #fff;
-	background-color:#fff;
-	color:#00F !important
-		
+	/*background-color:#fff;*/
+	/*color:#00F !important*/
+
 }
 
 #navbar ul {
@@ -79,10 +79,10 @@ body {
 
 }
 
-#navbar ul li a:hover {
+/*#navbar ul li a:hover {
 border-bottom:3px solid #fff;
 	color:#fff !important
-}
+}*/
 
 #top_bar {
 	background-color:#007BBA;
@@ -101,6 +101,7 @@ footer {
     color: #fff !important;
     position:fixed;
     width: 100%;
+		  z-index: 9
 }
 
 .col_date  p{
@@ -153,7 +154,7 @@ footer a, footer a:visited {
 
 .author-list li{
 	list-style:none;
-	
+
 }
 
 .post-list h2 {
@@ -291,7 +292,8 @@ footer a, footer a:visited {
 }
 
 .side_title {
-	color:rgb(0,0,255);
+	color: rgb(250,250,250);
+    font-weight: bold;
 }
 html, body {
   height: 100%;
@@ -299,7 +301,7 @@ html, body {
 #blog_menu li{
     border-bottom: 1px solid #F0F6FC;
     margin-left: 0;
- 
+
     padding-bottom: 10px;
     padding-left: 15px;
     padding-top: 10px;
