@@ -32,7 +32,7 @@ jekyll_ga:
   
 jekyll_sort:
   - src: posts
-    by: _ga4edsa
+    by: _ga
     direction: down
     dest: posts_popular
 
